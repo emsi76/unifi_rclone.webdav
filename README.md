@@ -9,7 +9,7 @@ Configurable port and root path and secured with [htpasswd](https://www.google.c
 <li>Operating a WebDav Server on your UDM can cause the disk storage to run out of space with corresponding consequences for the stability of the entire system.</li>
 <li>The default installation creates a 'webdav' WebDav user with default password 'webdav'. Be aware to change the users/passwords under the htpasswd file especially before opening ports of your firewall.</li>
 </ul>
-Use it at your own risk
+<b>Use it at your own risk!</b>
 
 Successfully tested on UDM Pro v4+ only.
 

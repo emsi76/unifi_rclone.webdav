@@ -29,11 +29,11 @@ Successfully tested on UDM Pro v4+ only.
 There are 3 config items under 'rclone_webdav.env' with following defaults:
 
 <code>
-#Defining the Port of the Webdav Server
+# Defining the Port of the Webdav Server
 RCLONE_WEBDAV_PORT= 55007
-#Defining the root folder of the WebDav Server
+# Defining the root folder of the WebDav Server
 RCLONE_WEBDAV_ROOT_PATH= /data/rclone/root
-#Defining the path of the log file
+# Defining the path of the log file
 RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
 </code>
 

@@ -13,8 +13,10 @@ Use it at your own risk
 Successfully tested on UDM Pro v4+ only.
 
 <h2>Installation</h2>
-
+<code>sudo -v ; curl https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main/install.sh | sudo bash</code>
 
 <h2>Configuration</h2>
+
+
 
 

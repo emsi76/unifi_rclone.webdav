@@ -12,7 +12,7 @@ Configurable port and root path and secured with [htpasswd](https://www.google.c
   </ul>
 </p>
 <p>
-<b>Use it at your own risk!</b>
+<b>*** Use it at your own risk! ***</b>
 </p>
 <p>
 Successfully tested on UDM Pro v4+ only.

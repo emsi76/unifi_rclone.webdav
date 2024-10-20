@@ -1,5 +1,5 @@
 # unifi_rclone.webdav
-Simple Webdav Server for Unifi Dream Machine based on [RClone](https://github.com/rclone/rclone)
+Simple Webdav Server for Unifi Dream Machine based on [rclone](https://github.com/rclone/rclone)
 
 <h2>Important Notes</h2>
 <ul>

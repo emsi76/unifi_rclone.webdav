@@ -42,6 +42,7 @@ check_version_model_dir(){
 
 # Check if service exists
 service_exists() {
+    echo checking if service exists
     local n=$1
     if [[ $(systemctl list-units --all -t service --full --no-legend "$n.service" | sed 's/^\s*//g' | cut -f1 -d' ') == $n.service ]]; then
         return 0
@@ -52,6 +53,7 @@ service_exists() {
 
 # Download files
 get_rclone_webdav(){
+	echo getting rclone_webdav
 	mkdir -p $RCLONE_WEBDAV_FOLDER
 	wget -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.sh" "$repoUrl/rclone_webdav/rclone_webdav.sh"
 	wget -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.service" "$repoUrl/rclone_webdav/rclone_webdav.service"
@@ -62,6 +64,7 @@ get_rclone_webdav(){
 }
 
 install_service(){
+	echo install service
 	cp $RCLONE_WEBDAV_FOLDER/rclone_webdav.service  /etc/systemd/system/rclone_webdav.service
 	sudo systemctl daemon-reload
 	sudo systemctl start rclone_webdav.service
@@ -69,6 +72,7 @@ install_service(){
 }
 
 update_service(){
+	echo update service
 	sudo systemctl stop rclone_webdav.service
 	sudo systemctl disable rclone_webdav.service
 	cp $RCLONE_WEBDAV_FOLDER/rclone_webdav.service  /etc/systemd/system/rclone_webdav.service
@@ -79,6 +83,7 @@ update_service(){
 
 #install rclone
 install_rclone(){
+	echo install rclone
 	sudo -v ; curl https://rclone.org/install.sh | sudo bash
 }
 

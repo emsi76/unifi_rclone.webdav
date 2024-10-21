@@ -21,7 +21,13 @@ Configurable port and root path and secured with <a href="https://httpd.apache.o
 <b>*** Use it at your own risk! ***</b>
 </p>
 <p>
-Successfully tested on UDM Pro v4+ only.
+Successfully tested on (only one device so far due to lack of hardware):
+  <p style="border: 1px solid;">
+  Family: UniFi Dream Machine (UDM)
+  Model: UniFi Dream Machine Pro (UDM-Pro)
+  Firmware: 4.0.21 (4.0.21)
+  </p>
+  
 </p>
 <h2>Installation</h2>
 SSH into your UDM and enter:</br>

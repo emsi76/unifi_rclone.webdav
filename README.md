@@ -46,6 +46,9 @@ RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
   Please generate your own user/pass to add via e.g.:<br/>
   <a href="https://htpasswdgenerator.de">htpasswd generator</a>
 </p>
+<p>
+  To make your changes effective just install again.
+</p>
 Don't forget to add a firewall rule, if you want to access the webdav server from WAN.
 
 <h2>Update</h2>

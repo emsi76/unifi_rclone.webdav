@@ -85,6 +85,14 @@ update_service(){
  	echo service 'rclone_webdav.service' updated
 }
 
+uninstall_service(){
+	echo uninstall service 'rclone_webdav.service'
+	sudo systemctl stop rclone_webdav.service
+	sudo systemctl disable rclone_webdav.service
+	rm $RCLONE_WEBDAV_FOLDER/rclone_webdav.service
+	sudo systemctl daemon-reload
+}
+
 #install rclone
 install_rclone(){
 	echo install rclone

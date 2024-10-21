@@ -3,7 +3,7 @@
 set -e
 SCRIPT_DIR=$(dirname ${0})
 
-export repoUrl='https://github.com/emsi76/unifi_rclone.webdav/blob/main'
+export repoUrl='https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main'
 export SERVICE_NAME='rclone_webdav'
 
 # Get the firmware version

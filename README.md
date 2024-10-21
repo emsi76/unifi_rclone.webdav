@@ -1,7 +1,8 @@
 # unifi_rclone.webdav
 <p>
 Simple <a href="http://www.webdav.org">Webdav</a> Server for Unifi Dream Machine (UDM) based on <a href="https://github.com/rclone/rclone">[rclone]</a>.<br/>
-Configurable port and root path and secured with <a href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html">[htpasswd]</a> for user/pass management as well as https using the certs of the UDM.
+Configurable port and root path and secured with <a href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html">[htpasswd]</a> for user/pass management as well as https using the certs of the UDM.<br/>
+Easy inbstallation and configuration should not take more than some minutes! :-)  
 </p>
 <p>
   This set of scripts installs rclone as WebDav Server - see <a href="https://rclone.org/commands/rclone_serve_webdav/">[rclone serve webdav]</a>, and set it up as service on your UDM.
@@ -37,27 +38,35 @@ SSH into your UDM and enter:</br>
 <code>sudo -v ; curl https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main/install.sh | sudo bash</code>
 
 <h2>Configuration</h2>
-
-There are 3 config items under 'rclone_webdav.env' with following defaults:
-<p>
-<code>
-# Defining the Port of the Webdav Server
-RCLONE_WEBDAV_PORT= 55007
-# Defining the root folder of the WebDav Server
-RCLONE_WEBDAV_ROOT_PATH= /data/rclone/root
-# Defining the path of the log file
-RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
-</code>
-</p>
-<p>
-  Basic user managment can be done via htpasswd file in '/data/rclone' folder.
-  Default  WebDav user is 'webdav' with default password 'webdav'.
-  Please generate your own user/pass to add via e.g.:<br/>
-  <a href="https://htpasswdgenerator.de">htpasswd generator</a>
-</p>
-<p>
-  To make your changes effective just install again.
-</p>
+2-Step quick config:<br/>&nbsp;<br/>
+<ol>
+  <li>
+    Environment parameters
+    <p>
+      there are 3 config items under 'rclone_webdav.env' with following defaults:<br/>
+      <code>
+      # Defining the Port of the Webdav Server
+      RCLONE_WEBDAV_PORT= 55007
+      # Defining the root folder of the WebDav Server
+      RCLONE_WEBDAV_ROOT_PATH= /data/rclone/root
+      # Defining the path of the log file
+      RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
+      </code>
+    </p>
+    <p>
+      To make your changes effective just run the installation commmand again (see above)!
+    </p>
+  </li>
+  <li>
+    User Management
+    <p>
+      Basic user managment can be done via htpasswd file in '/data/rclone' folder.
+      Default  WebDav user is 'webdav' with default password 'webdav'.
+      Please generate your own user/pass to add via e.g.:<br/>
+      <a href="https://htpasswdgenerator.de">htpasswd generator</a>
+    </p>
+  </li>
+</ol> 
 Don't forget to add a firewall rule, if you want to access the webdav server from WAN.
 
 <h2>Update</h2>

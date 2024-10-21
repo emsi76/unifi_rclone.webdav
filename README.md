@@ -1,11 +1,11 @@
 # unifi_rclone.webdav
 <p>
-Simple <a href="http://www.webdav.org">Webdav</a> Server for Unifi Dream Machine (UDM) based on <a href="https://github.com/rclone/rclone">[rclone]</a>.<br/>
-Configurable port and root path and secured with <a href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html">[htpasswd]</a> for user/pass management as well as https using the certs of the UDM.<br/>&nbsp;<br/>
+Simple <a href="http://www.webdav.org">Webdav</a> Server for Unifi Dream Machine (UDM) based on <a href="https://github.com/rclone/rclone">rclone</a>.<br/>
+Configurable port and root path and secured with <a href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html">htpasswd</a> for user/pass management as well as https using the certs of the UDM.<br/>&nbsp;<br/>
 Easy installation and configuration should not take more than some minutes! :-)  
 </p>
 <p>
-  This set of scripts installs rclone as WebDav Server - see <a href="https://rclone.org/commands/rclone_serve_webdav/">[rclone serve webdav]</a>, and set it up as service on your UDM.
+  This set of scripts installs rclone as WebDav Server - see <a href="https://rclone.org/commands/rclone_serve_webdav/">rclone serve webdav</a>, and set it up as service on your UDM.
 </p>
 <h2>Important Notes</h2>
 <p>
@@ -54,7 +54,7 @@ SSH into your UDM and enter:</br>
       </code>
     </p>
     <p>
-      To make your changes effective just run the installation commmand again (see above)!
+      To make your changes effective just run the installation commmand again (see <a href="#installation">installation</a> above)!
     </p>
   </li>
   <li>

@@ -57,9 +57,9 @@ get_rclone_webdav(){
 	mkdir -p $RCLONE_WEBDAV_FOLDER
  	wget -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.sh" "$repoUrl/rclone_webdav/rclone_webdav.sh"
 	wget -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.service" "$repoUrl/rclone_webdav/rclone_webdav.service"
- 	echo 'get config - but no overrwrite'
+ 	echo 'get config - but no overwrite'
 	wget -nc -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.env" "$repoUrl/rclone_webdav/rclone_webdav.env"
- 	echo 'get htpasswd - but no overrwrite'
+ 	echo 'get htpasswd - but no overwrite'
 	wget -nc -O "$RCLONE_WEBDAV_FOLDER/htpasswd" "$repoUrl/rclone_webdav/htpasswd"
  	echo 'setting right permissions'
 	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_webdav.sh

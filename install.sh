@@ -114,4 +114,10 @@ if service_exists rclone_webdav;
 		echo service installed
 fi
 
+# Load environment variables
+set -a
+source /data/rclone/rclone_webdav.env
+set +a
+
+echo your WebDav server should now be running on port $RCLONE_WEBDAV_PORT with root folder: $RCLONE_WEBDAV_ROOT_PATH
 

@@ -1,6 +1,6 @@
 # unifi_rclone.webdav
 <p>
-Simple Webdav Server for Unifi Dream Machine based on [rclone](https://github.com/rclone/rclone).<br/>
+Simple Webdav Server for Unifi Dream Machine based on <a href="https://github.com/rclone/rclone">[rclone]</a>.<br/>
 Configurable port and root path and secured with [htpasswd](https://httpd.apache.org/docs/2.4/programs/htpasswd.html) for user/pass management.
 </p>
 <p>

@@ -37,7 +37,7 @@ check_version_model_dir(){
   		echo "- Required '$DATA_DIR' directory does not exist -"
 		exit 1
 	fi
-	echo
+	echo valid model, version and /data folder existing...proceeding...
 }
 
 # Check if service exists

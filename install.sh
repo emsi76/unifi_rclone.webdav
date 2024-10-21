@@ -53,7 +53,7 @@ service_exists() {
 
 # Download files
 get_rclone_webdav(){
-	echo getting rclone_webdav
+	echo getting rclone_webdav in $RCLONE_WEBDAV_FOLDER
 	mkdir -p $RCLONE_WEBDAV_FOLDER
 	wget -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.sh" "$repoUrl/rclone_webdav/rclone_webdav.sh"
 	wget -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.service" "$repoUrl/rclone_webdav/rclone_webdav.service"
@@ -61,24 +61,27 @@ get_rclone_webdav(){
 	wget -nc -q -O "$RCLONE_WEBDAV_FOLDER/htpasswd" "$repoUrl/rclone_webdav/htpasswd"
 	chmod oug+rx $repoUrl/rclone_webdav/rclone_webdav.sh
 	chmod oug+rx $repoUrl/rclone_webdav/rclone_webdav.service
+ 	echo rclone_webdav now in $RCLONE_WEBDAV_FOLDER
 }
 
 install_service(){
-	echo install service
+	echo install service 'rclone_webdav.service'
 	cp $RCLONE_WEBDAV_FOLDER/rclone_webdav.service  /etc/systemd/system/rclone_webdav.service
 	sudo systemctl daemon-reload
 	sudo systemctl start rclone_webdav.service
 	sudo systemctl enable rclone_webdav.service
+ 	echo service 'rclone_webdav.service' installed
 }
 
 update_service(){
-	echo update service
+	echo update service 'rclone_webdav.service'
 	sudo systemctl stop rclone_webdav.service
 	sudo systemctl disable rclone_webdav.service
 	cp $RCLONE_WEBDAV_FOLDER/rclone_webdav.service  /etc/systemd/system/rclone_webdav.service
 	sudo systemctl daemon-reload
 	sudo systemctl start rclone_webdav.service
 	sudo systemctl enable rclone_webdav.service
+ 	echo service 'rclone_webdav.service' updated
 }
 
 #install rclone

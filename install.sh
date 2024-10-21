@@ -53,17 +53,17 @@ service_exists() {
 
 # Download files
 get_rclone_webdav(){
-	echo get the rclone_webdav files into $RCLONE_WEBDAV_FOLDER from $repoUrl
+	echo 'get the rclone_webdav files into $RCLONE_WEBDAV_FOLDER from $repoUrl'
 	mkdir -p $RCLONE_WEBDAV_FOLDER
  	wget -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.sh" "$repoUrl/rclone_webdav/rclone_webdav.sh"
 	wget -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.service" "$repoUrl/rclone_webdav/rclone_webdav.service"
- 	echo getting config and htpasswd (but no overrwrite)
+ 	echo 'getting config and htpasswd (but no overrwrite)'
 	wget -nc -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.env" "$repoUrl/rclone_webdav/rclone_webdav.env"
 	wget -nc -q -O "$RCLONE_WEBDAV_FOLDER/htpasswd" "$repoUrl/rclone_webdav/htpasswd"
- 	echo setting right permissions
+ 	echo 'setting right permissions'
 	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_webdav.sh
 	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_webdav.service
- 	echo rclone_webdav now into $RCLONE_WEBDAV_FOLDER
+ 	echo 'rclone_webdav now into $RCLONE_WEBDAV_FOLDER'
 }
 
 install_service(){

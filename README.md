@@ -38,9 +38,9 @@ RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
 </code>
 </p>
 <p>
-  User Managment can be done via htpasswd file in installation folder.
-  Default  WebDav user is 'webdav'with default password 'webdav'.
-  Please generate your own via:<br/>
+  Basic user managment can be done via htpasswd file in '/data/rclone' folder.
+  Default  WebDav user is 'webdav' with default password 'webdav'.
+  Please generate your own user/pass via:<br/>
   <a href="https://htpasswdgenerator.de">htpasswd generator</a>
 </p>
 Don't forget to add a firewall rule, if you want to access the webdav server from WAN.

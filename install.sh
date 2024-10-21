@@ -108,7 +108,7 @@ install_rclone
 if service_exists rclone_webdav; 
 	then
 		update_service
-		echo serive updated
+		echo service updated
     	else
 		install_service
 		echo service installed

@@ -22,13 +22,12 @@ Configurable port and root path and secured with <a href="https://httpd.apache.o
 </p>
 <p>
 Successfully tested on (only one device so far due to lack of hardware):
-  <p style="border: 1px solid;">
+</p>
+  <p style="border: 1px solid grey;">
   Family: UniFi Dream Machine (UDM)
   Model: UniFi Dream Machine Pro (UDM-Pro)
   Firmware: 4.0.21 (4.0.21)
   </p>
-  
-</p>
 <h2>Installation</h2>
 SSH into your UDM and enter:</br>
 <code>sudo -v ; curl https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main/install.sh | sudo bash</code>

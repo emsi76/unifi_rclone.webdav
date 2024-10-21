@@ -65,3 +65,5 @@ sudo systemctl daemon-reload
 rm -rf /data/rclone
 rm -f /etc/systemd/system/rclone_webdav.*
 </code>
+
+If you defined an own WebDav root folder, then also remove.

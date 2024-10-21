@@ -95,9 +95,9 @@ uninstall_service(){
 
 #install rclone
 install_rclone(){
-	echo install rclone
-	sudo -v ; curl https://rclone.org/install.sh | sudo bash
- 	echo rclone installed
+	echo try installing rclone
+	((sudo -v ; curl https://rclone.org/install.sh | sudo bash) || true)
+ 	echo 'rclone installed or already installed'
 }
 
 

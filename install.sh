@@ -88,6 +88,7 @@ update_service(){
 install_rclone(){
 	echo install rclone
 	sudo -v ; curl https://rclone.org/install.sh | sudo bash
+ 	echo rclone installed
 }
 
 

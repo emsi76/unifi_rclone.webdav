@@ -26,7 +26,7 @@ check_version_model_dir(){
 
 	case "${MODEL}" in
 	"UniFi Dream Machine Pro"|"UniFi Dream Machine"|"UniFi Dream Router"|"UniFi Dream Machine SE")
-		echo "${MODEL} running firmware ${FIRMWARE_VER} detected, installing ubios-cert in ${DATA_DIR}..."
+		echo "${MODEL} running firmware ${FIRMWARE_VER} detected, installing rclone.webdav in ${DATA_DIR}..."
 		;;
 		*)
 		echo "- Unsupported model - ${MODEL}"

@@ -56,12 +56,11 @@ Connect with your preferred WebDav Client via https to the url/ip of your UDM us
 Depending on the ssl certs you are using on your UDM you will have to trust the cert.
 
 <h2>Uninstallation</h2>
-currently manual uninstall only
+currently manual uninstall only<br/>
 <code>
 # Disable rclone_webdav.service from running at boot
 sudo systemctl disable rclone_webdav.service
 sudo systemctl daemon-reload
-
 # Delete any rclone_webdav.service related data
 rm -rf /data/rclone
 rm -f /etc/systemd/system/rclone_webdav.*

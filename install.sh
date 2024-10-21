@@ -59,8 +59,9 @@ get_rclone_webdav(){
 	wget -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.service" "$repoUrl/rclone_webdav/rclone_webdav.service"
 	wget -nc -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.env" "$repoUrl/rclone_webdav/rclone_webdav.env"
 	wget -nc -q -O "$RCLONE_WEBDAV_FOLDER/htpasswd" "$repoUrl/rclone_webdav/htpasswd"
-	chmod oug+rx $repoUrl/rclone/rclone_webdav.sh
-	chmod oug+rx $repoUrl/rclone/rclone_webdav.service
+ 	echo setting right permissions
+	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_webdav.sh
+	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_webdav.service
  	echo rclone_webdav now in $RCLONE_WEBDAV_FOLDER
 }
 

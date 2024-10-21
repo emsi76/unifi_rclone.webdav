@@ -24,6 +24,7 @@ Configurable port and root path and secured with <a href="https://httpd.apache.o
 Successfully tested on UDM Pro v4+ only.
 </p>
 <h2>Installation</h2>
+SSH into your UDM and enter:
 <code>sudo -v ; curl https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main/install.sh | sudo bash</code>
 
 <h2>Configuration</h2>

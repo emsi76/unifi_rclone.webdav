@@ -53,7 +53,7 @@ service_exists() {
 
 # Download files
 get_rclone_webdav(){
-	echo getting rclone_webdav in $RCLONE_WEBDAV_FOLDER
+	echo getting rclone_webdav in $RCLONE_WEBDAV_FOLDER from $repoUrl
 	mkdir -p $RCLONE_WEBDAV_FOLDER
 	wget -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.sh" "$repoUrl/rclone_webdav/rclone_webdav.sh"
 	wget -q -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.service" "$repoUrl/rclone_webdav/rclone_webdav.service"

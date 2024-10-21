@@ -79,3 +79,9 @@ rm -f /etc/systemd/system/rclone_webdav.*
 </code>
 
 If you defined an own WebDav root folder, then also remove.
+<h2>Thanks</h2>
+<ul>
+<li>to <a href="ui.com">Unifi</a> for the great hardware/firmware accessible via ssh/bash</li>
+<li>to <a href="https://github.com/rclone/rclone">rclone</a> for the webdav server software which this utility is based on</li>
+<li>to <a href="https://github.com/alxwolf/ubios-cert">ubios-cert</a> making it even possible to run the webdav server with https and let's encrypt certs</li>
+</ul>

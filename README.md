@@ -40,7 +40,7 @@ RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
 Don't forget to add a firewall rule, if you want to access the webdav server from WAN.
 
 <h2>Update</h2>
-Same as Installation (config, htpasswd and root folder won't be touched).
+Same as Installation (existing config, htpasswd and root folder won't be touched).
 
 <h2>Use (WebDav Client)</h2>
 Connect with your preferred WebDav Client to the url/ip of your UDM using the configured port (defaults: 55007)

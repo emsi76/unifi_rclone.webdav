@@ -62,8 +62,8 @@ SSH into your UDM and enter:</br>
     <p>
       Basic user managment can be done via htpasswd file in '/data/rclone' folder.
       Default  WebDav user is 'webdav' with default password 'webdav'.
-      Please generate your own user/pass to add via e.g.:<br/>
-      <a href="https://htpasswdgenerator.de">htpasswd generator</a>
+      Please generate your own user/pass to add via e.g. with :<br/>
+      <a href="https://www.web2generators.com/apache-tools/htpasswd-generator">web2generators htpasswd-generator</a> or <a href="https://htpasswdgenerator.de">htpasswd generator</a>
     </p>
   </li>
 </ol> 

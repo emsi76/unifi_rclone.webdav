@@ -4,7 +4,7 @@ Simple <a href="http://www.webdav.org">Webdav</a> Server for Unifi Dream Machine
 Configurable port and root path and secured with <a href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html">[htpasswd]</a> for user/pass management as well as https using the certs of the UDM.
 </p>
 <p>
-  This set of scripts install rclone as WebDav Server - see <a href="https://rclone.org/commands/rclone_serve_webdav/">[rclone serve webdav]</a>, and set it up as service on your UDM.
+  This set of scripts installs rclone as WebDav Server - see <a href="https://rclone.org/commands/rclone_serve_webdav/">[rclone serve webdav]</a>, and set it up as service on your UDM.
 </p>
 <h2>Important Notes</h2>
 <p>

@@ -13,6 +13,8 @@ Configurable port and root path and secured with <a href="https://httpd.apache.o
   <li>No liability for damage or malfunctions of your Dream Machine caused by the installation of this utility.</li>
   <li>Operating a WebDav Server on your UDM can cause the disk storage to run out of space with corresponding consequences for the stability of the entire system.</li>
   <li>The default installation creates a 'webdav' WebDav user with default password 'webdav'. Be aware to change the users/passwords under the htpasswd file especially before opening ports of your firewall.</li>
+  <li>Upgrading your Dream Machine firmware typically requires to install again.</li>
+  <li>WebDav data under the root folder currently is persitent after reboot or even firmware update. But future upgrades could lead to data loss depending on what unifi is changing in the UnifiOS.</li>
   </ul>
 </p>
 <p>

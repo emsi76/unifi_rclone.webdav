@@ -72,9 +72,44 @@ Don't forget to add a firewall rule, if you want to access the webdav server fro
 <h2>Update</h2>
 Same as Installation (existing config, htpasswd and root folder won't be touched, remove then manually if you want fresh one).
   
-<h2>Use (WebDav Client)</h2>
+<h2>Use (supported WebDav Clients)</h2>
 Connect with your preferred WebDav Client via https to the url/ip of your UDM using the configured port (defaults: 55007).
-Depending on the ssl certs you are using on your UDM you will have to trust the cert.
+Depending on the ssl certs you are using on your UDM you will have to trust the cert.<br/>
+Following clients were successfully tested:
+<p>
+  <table border=1 cellspacing=10>
+  <tr>
+    <th>Client Type</th>
+    <th>Client</th>
+    <th>Version(s)</th>
+  </tr>
+  <tr>
+    <td>Browser</td>
+    <td>Safari</td>
+    <td>MacOS 18.0.1</td>
+  </tr>
+  <tr>
+    <td>Browser</td>
+    <td>Edge</td>
+    <td>MacOS 130.0.2849.52</td>
+  </tr>
+  <tr>
+    <td>App</td>
+    <td>Enpass</td>
+    <td>MacOS / iOS 6.11.4</td>
+  </tr> 
+  <tr>
+    <td>App</td>
+    <td>Banking4</td>
+    <td>MacOS / iOS 8.62</td>
+  </tr> 
+  <tr>
+    <td>App</td>
+    <td>PhotoSync</td>
+    <td>iOS 4.9.1</td>
+  </tr> 
+  </table>
+</p>
 
 <h2>Uninstallation</h2>
 currently manual uninstall only<br/>

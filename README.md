@@ -53,6 +53,7 @@ Successfully tested on (only one device so far due to lack of hardware):
       RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
       </code>
     </p>
+    <p>You can set the path to your disk (ssd/hdd) as RCLONE_WEBDAV_ROOT_PATH if you have a corresponding storage.
     <p>
       To make your changes effective just run the installation commmand again (see <a href="#installation">installation</a> above)!
     </p>

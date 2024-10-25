@@ -72,7 +72,7 @@ Don't forget to add a firewall rule, if you want to access the webdav server fro
 <h2>Update</h2>
 Same as Installation (existing config, htpasswd and root folder won't be touched, remove then manually if you want fresh one).
   
-<h2>Use (supported WebDav Clients)</h2>
+<h2>Use (tested WebDav Clients)</h2>
 Connect with your preferred WebDav Client via https to the url/ip of your UDM using the configured port (defaults: 55007).
 Depending on the ssl certs you are using on your UDM you will have to trust the cert.<br/>
 Following clients were successfully tested:

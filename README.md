@@ -34,7 +34,7 @@ Successfully tested on (only one device so far due to lack of hardware):
   </table>
 </p>
 <h2>Installation</h2>
-SSH into your UDM and enter:</br>
+<a href="https://help.ui.com/hc/en-us/articles/204909374-UniFi-Connect-with-Debug-Tools-SSH">SSH into your UDM</a> and enter:</br>
 <code>sudo -v ; curl https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main/install.sh | sudo bash</code>
 
 <h2>Configuration</h2>

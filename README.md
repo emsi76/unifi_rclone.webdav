@@ -124,6 +124,13 @@ rm -f /etc/systemd/system/rclone_webdav.*
 </code>
 
 If you defined an own WebDav root folder, then also remove.
+<h2>Tips</h2>
+<ul>
+  <li>
+    Find out the path to your added disk (hdd/sdd) with <b>xdf -h</b> and check the one with corresponding size:<br/>
+    <img width="50%" height="50%" src="https://github.com/user-attachments/assets/891ed8da-3e4d-43a5-932c-85de825ccb80">
+  </li>
+</ul>
 <h2>Thanks</h2>
 <ul>
 <li>to <a href="ui.com">Unifi</a> for the great hardware/firmware accessible via ssh/bash</li>

@@ -127,7 +127,7 @@ If you defined an own WebDav root folder, then also remove.
 <h2>Tips</h2>
 <ul>
   <li>
-    Find out the path to your added disk (hdd/sdd) with <b>df -h</b> and check the one with corresponding size:<br/>&nbsp;
+    Find out the path to your added disk (hdd/sdd) with <b>df -h</b> and check the one with corresponding size:<br/>&nbsp;<br/>
     <img width="50%" height="50%" src="https://github.com/user-attachments/assets/891ed8da-3e4d-43a5-932c-85de825ccb80">
     <br/>In this case: /dev/md3 mounted as /volume1 with 1,7 TB available size.
   </li>

@@ -1,5 +1,5 @@
 # unifi_rclone.webdav
-<p style="font-style:italic">
+<p>
 Transform your Unifi gateway to a NAS with this simple <a href="http://www.webdav.org">Webdav</a> Server for Unifi Dream Machine (UDM) based on <a href="https://github.com/rclone/rclone">rclone</a>.
 </p>
 <p>

@@ -10,6 +10,6 @@ tail -f ${RCLONE_WEBDAV_LOG_PATH} | grep --line-buffered ".*Unauthorized request
         if grep -c "^$(date +'%Y/%m/%d')\s$(date +'%H').*Unauthorized request.*from\swebdav" ${RCLONE_WEBDAV_LOG_PATH} > ${RCLONE_WEBDAV_FAILED_LIMIT}
         then 
             sed -i "s/^$line/#$line/g" /data/rclone/htpasswd
-            echo "banned $line at $(date +'%Y/%m/%d %H:%M:%S')" >> /data/rclone/banned_users.txt
+            echo "banned $line at $(date +'%Y/%m/%d %H:%M:%S')" >> /data/rclone/banned.txt
     fi
 done

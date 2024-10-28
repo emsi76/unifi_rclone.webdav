@@ -57,10 +57,12 @@ get_rclone_webdav(){
 	mkdir -p $RCLONE_WEBDAV_FOLDER
  	wget -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.sh" "$repoUrl/rclone_webdav/rclone_webdav.sh"
 	wget -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.service" "$repoUrl/rclone_webdav/rclone_webdav.service"
+ 	wget -O "$RCLONE_WEBDAV_FOLDER/ban_failed_users.sh" "$repoUrl/rclone_webdav/ban_failed_users.sh"
 	(wget -nc -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.env" "$repoUrl/rclone_webdav/rclone_webdav.env" || true)
 	(wget -nc -O "$RCLONE_WEBDAV_FOLDER/htpasswd" "$repoUrl/rclone_webdav/htpasswd" || true)
  	echo 'setting right permissions'
 	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_webdav.sh
+	chmod oug+rx $RCLONE_WEBDAV_FOLDER/ban_failed_users.sh
 	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_webdav.service
  	echo 'rclone_webdav now into $RCLONE_WEBDAV_FOLDER'
 }

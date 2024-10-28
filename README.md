@@ -1,11 +1,17 @@
 # unifi_rclone.webdav
 <p>
 Transform your Unifi gateway in a NAS with this simple <a href="http://www.webdav.org">Webdav</a> Server for Unifi Dream Machine (UDM) based on <a href="https://github.com/rclone/rclone">rclone</a>.<br/>
-Configurable port and root path and secured with <a href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html">htpasswd</a> for user/pass management as well as https using the certs of the UDM.<br/>&nbsp;<br/>
+<ul>
+  <li>Configurable port and root path (which can also be configured to your disk (hdd/sdd)</li>
+  <li>User/pass management with <a href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html">htpasswd</a></li>
+  <li>Secured with https using the certs of the UDM</li>
+  <li>Http(s) basic auth additionally hardened to ban users with more than x failed logins</li>
+</ul>
+
 Easy 3 step <a href="https://github.com/emsi76/unifi_rclone.webdav/blob/main/README.md#installation">installation</a> and <a href="https://github.com/emsi76/unifi_rclone.webdav#configuration">configuration</a> should not take more than some minutes! :-)  
 </p>
 <p>
-  This set of scripts installs rclone as WebDav Server - see <a href="https://rclone.org/commands/rclone_serve_webdav/">rclone serve webdav</a>, and set it up as service on your UDM.
+  This set of scripts installs rclone as WebDav Server - see <a href="https://rclone.org/commands/rclone_serve_webdav/">rclone serve webdav</a> and set it up as service on your UDM as well as a second service to ban users with more than x failed logins in current hour.
 </p>
 <h2>Important Notes</h2>
 <p>
@@ -43,7 +49,7 @@ Successfully tested on (only one device so far due to lack of hardware):
   <li>
     Environment parameters
     <p>
-      there are 3 config items under 'rclone_webdav.env' with following defaults:<br/>
+      there are 4 config items under 'rclone_webdav.env' with following defaults:<br/>
       <code>
       # Defining the Port of the Webdav Server
       RCLONE_WEBDAV_PORT= 55007
@@ -51,6 +57,8 @@ Successfully tested on (only one device so far due to lack of hardware):
       RCLONE_WEBDAV_ROOT_PATH= /data/rclone/root
       # Defining the path of the log file
       RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
+      # Defining the number of max failed logins of a user from htpasswd before he will be banned
+      RCLONE_WEBDAV_FAILED_LIMIT=10
       </code>
     </p>
     <p>You can set the path to your disk (ssd/hdd) as RCLONE_WEBDAV_ROOT_PATH if you have a corresponding storage.
@@ -136,5 +144,6 @@ If you defined an own WebDav root folder, then also remove.
 <ul>
 <li>to <a href="ui.com">Unifi</a> for the great hardware/firmware accessible via ssh/bash</li>
 <li>to <a href="https://github.com/rclone/rclone">rclone</a> for the webdav server software which this utility is based on</li>
-<li>to <a href="https://github.com/alxwolf/ubios-cert">ubios-cert</a> making it even possible to run the webdav server with https and let's encrypt certs</li>
+<li>to <a href="https://glennr.nl/s/unifi-lets-encrypt">Glenn R. unifi-lets-encrypt</a> making it even possible to run the webdav server with http<b>s</b> and let's encrypt certs of UDM</li>
+<li>to <a href="https://github.com/fail2ban/fail2ban">fail2ban</a> for the idea of hardening http basic auth by tailing the log file to ban</li>
 </ul>

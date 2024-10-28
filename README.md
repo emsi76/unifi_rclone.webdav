@@ -135,7 +135,8 @@ sudo systemctl daemon-reload
 # Delete any rclone_webdav.service related data
 rm -rf /data/rclone
 rm -f /etc/systemd/system/rclone_webdav.*
-  
+</code>
+<code>
 # Disable ban_failed_users.service from running at boot
 sudo systemctl stop ban_failed_users.service
 sudo systemctl disable ban_failed_users.service

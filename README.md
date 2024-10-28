@@ -82,7 +82,7 @@ Successfully tested on (only one device so far due to lack of hardware):
     </p>
   </li>
 </ol> 
-Don't forget to add a firewall rule (or a port forward rule), if you want to access the webdav server from WAN.
+Don't forget to add a firewall rule (or a port forward rule), if you want to access the webdav server from WAN (and read the <a href="https://github.com/emsi76/unifi_rclone.webdav/tree/main#security-considerations">Security considerations</a> before).
 
 <h2>Update</h2>
 Same as Installation (existing config, htpasswd and root folder won't be touched, remove then manually if you want fresh one).

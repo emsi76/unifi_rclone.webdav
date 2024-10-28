@@ -60,7 +60,7 @@ Successfully tested on (only one device so far due to lack of hardware):
       RCLONE_WEBDAV_ROOT_PATH= /data/rclone/root
       # Defining the path of the log file
       RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
-      # Defining the number of max failed logins of a user from htpasswd before he will be banned
+      # Defining the number of max failed logins per hour for a user before beeing banned from htpasswd
       RCLONE_WEBDAV_FAILED_LIMIT=10
       </code>
     </p>

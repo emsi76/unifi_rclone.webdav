@@ -74,8 +74,11 @@ Successfully tested on (only one device so far due to lack of hardware):
     <p>
       Basic user managment can be done via htpasswd file in '/data/rclone' folder.
       Default  WebDav user is 'webdav' with default password 'webdav'.
-      Please generate your own user/pass to add via e.g. with :<br/>
+      Please change the default by generating your own user/pass to add via e.g. with :<br/>
       <a href="https://www.web2generators.com/apache-tools/htpasswd-generator">web2generators htpasswd-generator</a> or <a href="https://htpasswdgenerator.de">htpasswd generator</a>
+    </p>
+    <p>
+      Users with more than configured failed logins will be banned. This is achieved by a dedicated service which puts a preceding '#' character to the username in the htpasswd file. Please remove the preceding '#' character in the htpasswd file manually to unban the corresponding user after investiagtion of the cause.
     </p>
   </li>
 </ol> 
@@ -136,7 +139,12 @@ rm -f /etc/systemd/system/rclone_webdav.*
 
 If you defined an own WebDav root folder, then also remove.
 <h2>Security considerations</h2>
-Rclone uses http basic authentication. Even additionally secured with https (using the certs of the UDM) the authentication scheme remains poor and is especially unprotected against brute force attacks, because by default endless login failures are allowed. For this reason, this Webdav server is additionally secured with another service that ensures a maximum number of failed attempts per user and hour. Despite this it is still not recommended to connect to this webdav server from public devices as the authentication scheme is also poor in the handling of sessions (no logout).
+Rclone uses http basic authentication. Even additionally secured with https (using the certs of the UDM) the authentication scheme remains poor and is especially unprotected against brute force attacks, because by default endless login failures are allowed. For this reason, this Webdav server is additionally secured with another service that ensures a maximum number of failed attempts per user and hour. In this case, the user is blocked until he is manually unblocked in the httpaswd file (by removing the preceding '#' character). The latter makes the server vulnerable for Denial of Service (DoS) for known usernames. It is why you should use non trivial username (like 'admin', 'user',...) and do not share the username to third parties. In addition it is also not recommended to connect to this webdav server from public devices as the authentication scheme is also poor in the handling of sessions (no logout). Lastly be aware that all users managed in htpasswd will have access to the whole webdav root. In summary I recommend the following rules to keep secure:
+<ul>
+  <li>Do not use standard usernames ('admin', 'user', 'guest',...)</li>
+  <li>Do not connect to this Webdav server from public devices/computers</li>
+  <li>Do not share usernames with third parties</li>
+</ul>
 <h2>Tips</h2>
 <ul>
   <li>

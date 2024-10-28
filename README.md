@@ -135,6 +135,8 @@ rm -f /etc/systemd/system/rclone_webdav.*
 </code>
 
 If you defined an own WebDav root folder, then also remove.
+<h2>Security considerations</h2>
+Rclone uses http basic authentication. Even additionally secured with https (using the certs of the UDM) the authentication scheme remains poor and is especially unprotected against brute force attacks, because by default endless login failures are allowed. For this reason, this Webdav server is additionally secured with another service that ensures a maximum number of failed attempts per user and hour. Despite this it is still not recommended to connect to this webdav server from public devices as the authentication scheme is also poor in the handling of sessions (no logout).
 <h2>Tips</h2>
 <ul>
   <li>

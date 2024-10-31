@@ -53,16 +53,14 @@ Successfully tested on (only one device so far due to lack of hardware):
     Environment parameters
     <p>
       there are 4 config items under 'rclone_webdav.env' with following defaults:<br/>
-      <code>
-      # Defining the Port of the Webdav Server
-      RCLONE_WEBDAV_PORT= 55007
-      # Defining the root folder of the WebDav Server
-      RCLONE_WEBDAV_ROOT_PATH= /data/rclone/root
-      # Defining the path of the log file
-      RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
-      # Defining the number of max failed logins per hour for a user before beeing banned from htpasswd
-      RCLONE_WEBDAV_FAILED_LIMIT=10
-      </code>
+      <code># Defining the Port of the Webdav Server
+RCLONE_WEBDAV_PORT= 55007
+# Defining the root folder of the WebDav Server
+RCLONE_WEBDAV_ROOT_PATH= /data/rclone/root
+# Defining the path of the log file
+RCLONE_WEBDAV_LOG_PATH=/data/rclone/log.txt
+# Defining the number of max failed logins per hour for a user before beeing banned from htpasswd
+RCLONE_WEBDAV_FAILED_LIMIT=10</code>
     </p>
     <p>You can set the path to your disk (ssd/hdd) as RCLONE_WEBDAV_ROOT_PATH if you have a corresponding storage.
     <p>

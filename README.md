@@ -83,7 +83,7 @@ RCLONE_WEBDAV_FAILED_LIMIT=10</code>
 Don't forget to add a firewall rule (or a port forward rule), if you want to access the webdav server from WAN (and read the <a href="https://github.com/emsi76/unifi_rclone.webdav/tree/main#security-considerations">Security considerations</a> before).
 
 <h2>Update</h2>
-Same as Installation (existing config, htpasswd and root folder won't be touched, remove then manually if you want fresh one).
+Same as <a href="https://github.com/emsi76/unifi_rclone.webdav/blob/main/README.md#installation">Installation</a> (existing config, htpasswd and root folder won't be touched, remove then manually if you want fresh one).
   
 <h2>Use (tested WebDav Clients)</h2>
 Connect with your preferred WebDav Client via https to the url/ip of your UDM using the configured port (defaults: 55007).

@@ -8,6 +8,7 @@ Transform your Unifi gateway to a NAS with this simple <a href="http://www.webda
   <li>User/pass management with <a href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html">htpasswd</a></li>
   <li>Secured with https using the certs of the UDM</li>
   <li>Http(s) basic auth additionally hardened to ban users with more than 10 failed logins in the current hour</li>
+  <li>Low consumption of resources (CPU / MEM)</li>
 </ul>
 </p>
 <p>

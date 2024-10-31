@@ -94,7 +94,7 @@ Following clients were successfully tested:
   <tr>
     <th>Client Type</th>
     <th>Client</th>
-    <th>Version(s)</th>
+    <th>App Version(s)</th>
   </tr>
   <tr>
     <td>Browser</td>

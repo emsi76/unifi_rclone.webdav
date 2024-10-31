@@ -1,10 +1,10 @@
 [Unit]
-Description=Rclone WebDav Service
+Description=Rclone Ban Failed Users Service
 Wants=network-online.target
 After=network-online.target rclone_webdav.service
 
 [Service]
-ExecStart=/data/rclone/ban_failed_users.sh
+ExecStart=/data/rclone/rclone_ban_failed_users.sh
 Restart=always
 
 [Install]

@@ -11,7 +11,7 @@ Transform your Unifi gateway to a NAS with this simple <a href="http://www.webda
 </ul>
 </p>
 <p>
-Easy 3 step <a href="https://github.com/emsi76/unifi_rclone.webdav/blob/main/README.md#installation">installation</a> and <a href="https://github.com/emsi76/unifi_rclone.webdav#configuration">configuration</a> should not take more than some minutes! :-)  
+Easy 1 step <a href="https://github.com/emsi76/unifi_rclone.webdav/blob/main/README.md#installation">installation</a> and 2 step <a href="https://github.com/emsi76/unifi_rclone.webdav#configuration">configuration</a> should not take more than some minutes! :-)  
 </p>
 <p>
   This set of scripts installs rclone as WebDav Server - see <a href="https://rclone.org/commands/rclone_serve_webdav/">rclone serve webdav</a> and set it up as service on your UDM as well as a second service to ban users with more than x failed logins in current hour.

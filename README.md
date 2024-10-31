@@ -127,6 +127,13 @@ Following clients were successfully tested:
 <h2>Uninstallation</h2>
 currently manual uninstall only<br/>
 <code>
+# Disable ban_failed_users.service from running at boot
+sudo systemctl stop rclone_ban_failed_users.service
+sudo systemctl disable rclone_ban_failed_users.service
+rm $RCLONE_WEBDAV_FOLDER/rclone_ban_failed_users.service
+sudo systemctl daemon-reload
+</code>
+<code>
 # Disable rclone_webdav.service from running at boot
 sudo systemctl disable rclone_webdav.service
 sudo systemctl daemon-reload
@@ -134,13 +141,7 @@ sudo systemctl daemon-reload
 rm -rf /data/rclone
 rm -f /etc/systemd/system/rclone_webdav.*
 </code>
-<code>
-# Disable ban_failed_users.service from running at boot
-sudo systemctl stop ban_failed_users.service
-sudo systemctl disable ban_failed_users.service
-rm $RCLONE_WEBDAV_FOLDER/ban_failed_users.service
-sudo systemctl daemon-reload
-</code>
+
 <br/>
 If you defined an own WebDav root folder, then also remove.
 <h2>Security considerations</h2>

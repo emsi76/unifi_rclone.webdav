@@ -99,7 +99,7 @@ uninstall_webdav_service(){
 
 install_rclone_ban_failed_users_service(){
 	echo install service 'rclone_ban_failed_users.service'
-	cp $RCLONE_WEBDAV_FOLDER/ban_failed_users.service  /etc/systemd/system/rclone_ban_failed_users.service
+	cp $RCLONE_WEBDAV_FOLDER/rclone_ban_failed_users.service  /etc/systemd/system/rclone_ban_failed_users.service
 	sudo systemctl daemon-reload
 	sudo systemctl start rclone_ban_failed_users.service
 	sudo systemctl enable rclone_ban_failed_users.service

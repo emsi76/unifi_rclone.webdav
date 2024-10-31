@@ -99,27 +99,27 @@ Following clients were successfully tested:
   <tr>
     <td>Browser</td>
     <td><a href="https://www.apple.com/safari/">Safari</a></td>
-    <td>MacOS 18.0.1</td>
+    <td>18.0.1 (MacOS)</td>
   </tr>
   <tr>
     <td>Browser</td>
     <td><a href="https://www.microsoft.com/en-us/edge/download?form=MA13FJ">Edge</a></td>
-    <td>MacOS 130.0.2849.52</td>
+    <td>130.0.2849.52 (MacOS)</td>
   </tr>
   <tr>
     <td>App</td>
     <td><a href="https://www.enpass.io">Enpass</a></td>
-    <td>MacOS / iOS 6.11.4</td>
+    <td>6.11.4 (MacOS / iOS)</td>
   </tr> 
   <tr>
     <td>App</td>
     <td><a href="https://subsembly.com/banking4.html">Banking4</a></td>
-    <td>MacOS / iOS 8.62</td>
+    <td>8.62 (MacOS / iOS)</td>
   </tr> 
   <tr>
     <td>App</td>
     <td><a href="https://www.photosync-app.com/">PhotoSync</a></td>
-    <td>iOS 4.9.1</td>
+    <td>4.9.1 (iOS)</td>
   </tr> 
   </table>
 </p>

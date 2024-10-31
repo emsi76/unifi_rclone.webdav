@@ -57,15 +57,15 @@ get_rclone_webdav(){
 	mkdir -p $RCLONE_WEBDAV_FOLDER
  	wget -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.sh" "$repoUrl/rclone_webdav/rclone_webdav.sh"
 	wget -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.service" "$repoUrl/rclone_webdav/rclone_webdav.service"
- 	wget -O "$RCLONE_WEBDAV_FOLDER/ban_failed_users.sh" "$repoUrl/rclone_webdav/ban_failed_users.sh"
- 	wget -O "$RCLONE_WEBDAV_FOLDER/ban_failed_users.service" "$repoUrl/rclone_webdav/ban_failed_users.service"
+ 	wget -O "$RCLONE_WEBDAV_FOLDER/rclone_ban_failed_users.sh" "$repoUrl/rclone_webdav/rclone_ban_failed_users.sh"
+ 	wget -O "$RCLONE_WEBDAV_FOLDER/rclone_ban_failed_users.service" "$repoUrl/rclone_webdav/rclone_ban_failed_users.service"
 	(wget -nc -O "$RCLONE_WEBDAV_FOLDER/rclone_webdav.env" "$repoUrl/rclone_webdav/rclone_webdav.env" || true)
 	(wget -nc -O "$RCLONE_WEBDAV_FOLDER/htpasswd" "$repoUrl/rclone_webdav/htpasswd" || true)
  	echo 'setting right permissions'
 	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_webdav.sh
-	chmod oug+rx $RCLONE_WEBDAV_FOLDER/ban_failed_users.sh
+	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_ban_failed_users.sh
 	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_webdav.service
- 	chmod oug+rx $RCLONE_WEBDAV_FOLDER/ban_failed_users.service
+ 	chmod oug+rx $RCLONE_WEBDAV_FOLDER/rclone_ban_failed_users.service
  	echo 'rclone_webdav now into $RCLONE_WEBDAV_FOLDER'
 }
 
@@ -97,31 +97,31 @@ uninstall_webdav_service(){
 	sudo systemctl daemon-reload
 }
 
-install_ban_failed_users_service(){
-	echo install service 'ban_failed_users.service'
-	cp $RCLONE_WEBDAV_FOLDER/ban_failed_users.service  /etc/systemd/system/ban_failed_users.service
+install_rclone_ban_failed_users_service(){
+	echo install service 'rclone_ban_failed_users.service'
+	cp $RCLONE_WEBDAV_FOLDER/ban_failed_users.service  /etc/systemd/system/rclone_ban_failed_users.service
 	sudo systemctl daemon-reload
-	sudo systemctl start ban_failed_users.service
-	sudo systemctl enable ban_failed_users.service
- 	echo service 'ban_failed_users.service' installed
+	sudo systemctl start rclone_ban_failed_users.service
+	sudo systemctl enable rclone_ban_failed_users.service
+ 	echo service 'rclone_ban_failed_users.service' installed
 }
 
-update_ban_failed_users_service(){
-	echo update service 'ban_failed_users.service'
-	sudo systemctl stop ban_failed_users.service
-	sudo systemctl disable ban_failed_users.service
-	cp $RCLONE_WEBDAV_FOLDER/ban_failed_users.service  /etc/systemd/system/ban_failed_users.service
+update_rclone_ban_failed_users_service(){
+	echo update service 'rclone_ban_failed_users.service'
+	sudo systemctl stop rclone_ban_failed_users.service
+	sudo systemctl disable rclone_ban_failed_users.service
+	cp $RCLONE_WEBDAV_FOLDER/ban_failed_users.service  /etc/systemd/system/rclone_ban_failed_users.service
 	sudo systemctl daemon-reload
-	sudo systemctl start ban_failed_users.service
-	sudo systemctl enable ban_failed_users.service
- 	echo service 'ban_failed_users.service' updated
+	sudo systemctl start rclone_ban_failed_users.service
+	sudo systemctl enable rclone_ban_failed_users.service
+ 	echo service 'rclone_ban_failed_users.service' updated
 }
 
-uninstall_ban_failed_users_service(){
-	echo uninstall service 'ban_failed_users.service'
-	sudo systemctl stop ban_failed_users.service
-	sudo systemctl disable ban_failed_users.service
-	rm $RCLONE_WEBDAV_FOLDER/ban_failed_users.service
+uninstall_rclone_ban_failed_users_service(){
+	echo uninstall service 'rclone_ban_failed_users.service'
+	sudo systemctl stop rclone_ban_failed_users.service
+	sudo systemctl disable rclone_ban_failed_users.service
+	rm $RCLONE_WEBDAV_FOLDER/rclone_ban_failed_users.service
 	sudo systemctl daemon-reload
 }
 
@@ -145,12 +145,12 @@ if service_exists rclone_webdav;
 		install_webdav_service
 		echo service installed
 fi
-if service_exists ban_failed_users; 
+if service_exists rclone_ban_failed_users; 
 	then
-		update_ban_failed_users_service
+		update_rclone_ban_failed_users_service
 		echo service updated
     	else
-		install_ban_failed_users_service
+		install_rclone_ban_failed_users_service
 		echo service installed
 fi
 

@@ -148,7 +148,7 @@ If you defined an own WebDav root folder, then also remove.
 <h2>Security considerations</h2>
 Rclone uses <a href="https://rclone.org/commands/rclone_serve_webdav/#authentication">http basic authentication</a>. Even additionally secured with https (using the certs of the UDM) the authentication scheme remains poor and is especially unprotected against brute force attacks, because by default endless login failures are allowed. For this reason, this Webdav server is additionally secured with another service that ensures a maximum number of failed attempts per user and hour. In this case, the user is blocked until he is manually unblocked in the httpaswd file (by removing the preceding '#' character). The latter makes the server vulnerable for Denial of Service (DoS) for known usernames. It is why you should use non trivial username (like 'admin', 'user', 'guest',...) and do not share the username to third parties. In addition it is also not recommended to connect to this webdav server from public devices as the authentication scheme is also poor in the handling of sessions (no logout). Lastly be aware that all users managed in htpasswd will have access to the whole webdav root. In summary I recommend the <b>following rules to keep secure</b>:<br/>
 <ul>
-  <li><b>xDo not use standard usernames</b> ('admin', 'user', 'guest',...)</li>
+  <li><b>Do not use standard usernames</b> ('admin', 'user', 'guest',...)</li>
   <li><b>Do not connect</b> to this Webdav server <b>from public devices/computers</b>, that are not in your ownership or shared with third parties..</li>
   <li><b>Do not share usernames</b> with third parties.</li>
 </ul>

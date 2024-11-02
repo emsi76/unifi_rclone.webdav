@@ -12,7 +12,7 @@ echo "getopts..."
 while getopts "h?iu:" opt; do
     case "$opt" in
     h|\?)
-        echo -e "Usage: $0 [-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
+        echo -e "Usage: setup.sh [-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
         exit 0
         ;;
     i)  install=true

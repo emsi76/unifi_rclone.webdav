@@ -1,18 +1,16 @@
 #!/bin/bash
 
-echo starting setup script...
+#echo starting setup.sh script...
 
-#set -e
 
 OPTIND=1         # Reset in case getopts has been used previously in the shell.
 install=false
 uninstall=false
 
-echo "getopts..."
 while getopts "h?iu:" opt; do
     case "$opt" in
     h|\?)
-        echo -e "Usage: setup.sh [-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
+        echo -e "Usage: setup.sh\n[-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
         exit 0
         ;;
     i)  install=true
@@ -22,7 +20,7 @@ while getopts "h?iu:" opt; do
     	echo "setup mode is uninstallation"
         ;;
     *) 
-    	echo -e "Missing argument. Usage: $0 [-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
+    	echo -e "Missing argument. Usage: setup.sh\n[-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
         exit 0
 	;;
     esac
@@ -32,7 +30,7 @@ shift $((OPTIND-1))
 
 [ "${1:-}" = "--" ] && shift
 
-echo "install=$install, uninstall=$uninstall, Leftovers: $@"
+#echo "install=$install, uninstall=$uninstall, Leftovers: $@"
 
 export repoUrl='https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main'
 export SERVICE_NAME='rclone_webdav'
@@ -193,7 +191,7 @@ uninstallation(){
   if service_exists rclone_ban_failed_users; 
   	then
   		uninstall_rclone_ban_failed_users_service
-  		echo service unistalled
+  		echo service uninstalled
   fi
   if service_exists rclone_webdav; 
   	then

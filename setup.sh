@@ -32,6 +32,7 @@ shift $((OPTIND-1))
 
 [ "${1:-}" = "--" ] && shift
 
+echo "install=$install, uninstall=$uninstall, Leftovers: $@"
 
 export repoUrl='https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main'
 export SERVICE_NAME='rclone_webdav'

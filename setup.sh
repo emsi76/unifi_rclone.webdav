@@ -28,7 +28,8 @@ done
 
 shift $((OPTIND-1))
 [ "${1:-}" = "--" ] && shift
-#echo "install=$install, uninstall=$uninstall, Leftovers: $@"
+
+echo "install=$install, uninstall=$uninstall, Leftovers: $@"
 
 if [ ! $install ]
     then

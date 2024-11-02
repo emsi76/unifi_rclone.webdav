@@ -15,8 +15,10 @@ while getopts "h?iu:" opt; do
         exit 0
         ;;
     i)  install=true
+    	echo "setup mode is installation"
         ;;
-    u)  uninstall=false
+    u)  uninstall=true
+    	echo "setup mode is uninstallation"
         ;;
     *) 
     	echo -e "Missing argument. Usage: $0 [-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
@@ -28,6 +30,7 @@ done
 shift $((OPTIND-1))
 
 [ "${1:-}" = "--" ] && shift
+
 
 export repoUrl='https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main'
 export SERVICE_NAME='rclone_webdav'

@@ -29,11 +29,9 @@ done
 shift $((OPTIND-1))
 
 [ "${1:-}" = "--" ] && shift
-
 #echo "install=$install, uninstall=$uninstall, Leftovers: $@"
 
-
-if [ ! $install & ! $uninstall ]
+if [ ! ( $install && $uninstall ) ]
     then
 	echo -e "Missing mandatory argument. Usage: setup.sh\n[-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
         exit 0

@@ -115,7 +115,7 @@ update_webdav_service(){
  	echo service 'rclone_webdav.service' updated
 }
 
-_webdav_service(){
+uninstall_webdav_service(){
 	echo  service 'rclone_webdav.service'
 	sudo systemctl stop rclone_webdav.service
 	sudo systemctl disable rclone_webdav.service
@@ -144,7 +144,7 @@ update_rclone_ban_failed_users_service(){
  	echo service 'rclone_ban_failed_users.service' updated
 }
 
-_rclone_ban_failed_users_service(){
+uninstall_rclone_ban_failed_users_service(){
 	echo  service 'rclone_ban_failed_users.service'
 	sudo systemctl stop rclone_ban_failed_users.service
 	sudo systemctl disable rclone_ban_failed_users.service
@@ -187,12 +187,12 @@ uninstallation(){
   check_version_model_dir
   if service_exists rclone_ban_failed_users; 
   	then
-  		_rclone_ban_failed_users_service
+  		uninstall_rclone_ban_failed_users_service
   		echo service unistalled
   fi
   if service_exists rclone_webdav; 
   	then
-  		_webdav_service
+  		uninstall_webdav_service
   		echo service ed
   fi
 }

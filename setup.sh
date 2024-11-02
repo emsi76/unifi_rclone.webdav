@@ -179,7 +179,7 @@ installation(){
   fi
 }
 
-ation(){
+uninstallation(){
   check_version_model_dir
   if service_exists rclone_ban_failed_users; 
   	then

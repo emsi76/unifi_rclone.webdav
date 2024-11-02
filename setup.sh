@@ -47,7 +47,6 @@ export MODEL="$(ubnt-device-info model || true)"
 export RCLONE_WEBDAV_FOLDER='/data/rclone'
 
 # Check os version
-
 check_version_model_dir(){
 	if [ $(echo ${FIRMWARE_VER} | sed 's#\..*$##g') -gt 1 ]
 		then

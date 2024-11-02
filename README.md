@@ -44,7 +44,7 @@ Successfully tested on (only one device so far due to lack of hardware):
   </table>
 </p>
 <h2>Installation</h2>
-<a href="https://help.ui.com/hc/en-us/articles/204909374-UniFi-Connect-with-Debug-Tools-SSH">SSH into your UDM</a> and enter:</br>
+<a href="https://help.ui.com/hc/en-us/articles/204909374-UniFi-Connect-with-Debug-Tools-SSH">SSH into your UDM</a> and enter:<br/>&nbsp;<br/>
 <code>sudo -v ; curl https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main/setup.sh | sudo bash -s -- -i</code>
 
 <h2>Configuration</h2>
@@ -126,16 +126,16 @@ Following clients were successfully tested:
 </p>
 
 <h2>Uninstallation</h2>
-
-<code>
-sudo -v ; curl https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main/setup.sh | sudo bash -s -- -u
-</code><br/>
+<p><code>sudo -v ; curl https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main/setup.sh | sudo bash -s -- -u</code><br/>
 (argument '-u' for uninstallation instead of '-i' for installation)
-<br/>
-You will have to remove your config files (htpasswd and rclone_webdav.env) as well as default webdav_root folder by yourself with:<br/>
-<code>rm -r /data/rclone</code>
+<br/></p>
+<p>
+You will have to remove your config files (htpasswd and rclone_webdav.env) as well as default webdav_root folder by yourself with:<br/>&nbsp;
+<code>rm -r /data/rclone</code><br/>
+</p>
+<p>
 If you defined an own WebDav root folder, then also remove manually.
-
+</p>
 <h2>Security considerations</h2>
 Rclone uses <a href="https://rclone.org/commands/rclone_serve_webdav/#authentication">http basic authentication</a>. Even additionally secured with https (using the certs of the UDM) the authentication scheme remains poor and is especially unprotected against brute force attacks, because by default endless login failures are allowed. For this reason, this Webdav server is additionally secured with another service that ensures a maximum number of failed attempts per user and hour. In this case, the user is blocked until he is manually unblocked in the httpaswd file (by removing the preceding '#' character). The latter makes the server vulnerable for Denial of Service (DoS) for known usernames. It is why you should use non trivial username (like 'admin', 'user', 'guest',...) and do not share the username to third parties. In addition it is also not recommended to connect to this webdav server from public devices as the authentication scheme is also poor in the handling of sessions (no logout). Lastly be aware that all users managed in htpasswd will have access to the whole webdav root. In summary I recommend the <b>following rules to keep secure</b>:<br/>
 <ul>

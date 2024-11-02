@@ -7,7 +7,7 @@ OPTIND=1         # Reset in case getopts has been used previously in the shell.
 install=false
 uninstall=false
 
-while getopts "h?iu:" opt; do
+while getopts "h?iu" opt; do
     case "$opt" in
     h|\?)
         echo -e "Usage: setup.sh\n[-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
@@ -29,7 +29,7 @@ done
 shift $((OPTIND-1))
 [ "${1:-}" = "--" ] && shift
 
-echo "install=$install, uninstall=$uninstall, Leftovers: $@"
+# echo "install=$install, uninstall=$uninstall, Leftovers: $@"
 
 if [[ "$install" = false ]]
     then
@@ -40,7 +40,7 @@ if [[ "$install" = false ]]
 	fi
 fi
 
-echo 'proceeding...'
+# echo 'proceeding...'
 
 export repoUrl='https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main'
 export SERVICE_NAME='rclone_webdav'

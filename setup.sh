@@ -18,6 +18,10 @@ while getopts "h?iu:" opt; do
         ;;
     u)  uninstall=false
         ;;
+    *) 
+    	echo -e "Usage: $0 [-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
+        exit 0
+	;;
     esac
 done
 

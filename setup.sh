@@ -2,12 +2,13 @@
 
 echo starting setup script...
 
-set -e
+#set -e
 
 OPTIND=1         # Reset in case getopts has been used previously in the shell.
 install=false
 uninstall=false
 
+echo "getopts..."
 while getopts "h?iu:" opt; do
     case "$opt" in
     h|\?)

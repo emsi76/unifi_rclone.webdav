@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo starting setup script...
+
 set -e
 
 OPTIND=1         # Reset in case getopts has been used previously in the shell.

@@ -205,4 +205,4 @@ if install;
         uninstallation
         echo your WebDav server is now uninstalled!
     fi
-if
+fi

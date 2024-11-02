@@ -30,10 +30,13 @@ shift $((OPTIND-1))
 [ "${1:-}" = "--" ] && shift
 #echo "install=$install, uninstall=$uninstall, Leftovers: $@"
 
-if [ ! ( $install && $uninstall ) ]
+if [ ! $install ]
     then
-	echo -e "Missing mandatory argument. Usage: setup.sh\n[-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
-        exit 0
+    	if [ ! $uninstall ]
+     	   then
+		echo -e "Missing mandatory argument. Usage: setup.sh\n[-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
+       		exit 0
+	fi
 fi
 
 export repoUrl='https://raw.githubusercontent.com/emsi76/unifi_rclone.webdav/refs/heads/main'

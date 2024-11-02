@@ -29,6 +29,7 @@ done
 shift $((OPTIND-1))
 
 [ "${1:-}" = "--" ] && shift
+
 #echo "install=$install, uninstall=$uninstall, Leftovers: $@"
 
 

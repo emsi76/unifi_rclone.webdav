@@ -12,9 +12,9 @@ while getopts "h?iu:" opt; do
         echo -e "Usage: $0 [-i]\t to install rclone webdav\n[-u]\t to uninstall rclone webdav"
         exit 0
         ;;
-    v)  install=true
+    i)  install=true
         ;;
-    n)  uninstall=false
+    u)  uninstall=false
         ;;
     esac
 done
@@ -109,8 +109,8 @@ update_webdav_service(){
  	echo service 'rclone_webdav.service' updated
 }
 
-uninstall_webdav_service(){
-	echo uninstall service 'rclone_webdav.service'
+_webdav_service(){
+	echo  service 'rclone_webdav.service'
 	sudo systemctl stop rclone_webdav.service
 	sudo systemctl disable rclone_webdav.service
 	rm $RCLONE_WEBDAV_FOLDER/rclone_webdav.service
@@ -138,8 +138,8 @@ update_rclone_ban_failed_users_service(){
  	echo service 'rclone_ban_failed_users.service' updated
 }
 
-uninstall_rclone_ban_failed_users_service(){
-	echo uninstall service 'rclone_ban_failed_users.service'
+_rclone_ban_failed_users_service(){
+	echo  service 'rclone_ban_failed_users.service'
 	sudo systemctl stop rclone_ban_failed_users.service
 	sudo systemctl disable rclone_ban_failed_users.service
 	rm $RCLONE_WEBDAV_FOLDER/rclone_ban_failed_users.service
@@ -177,21 +177,21 @@ installation(){
   fi
 }
 
-uninstallation(){
+ation(){
   check_version_model_dir
   if service_exists rclone_ban_failed_users; 
   	then
-  		uninstall_rclone_ban_failed_users_service
+  		_rclone_ban_failed_users_service
   		echo service unistalled
   fi
   if service_exists rclone_webdav; 
   	then
-  		uninstall_webdav_service
-  		echo service uninstalled
+  		_webdav_service
+  		echo service ed
   fi
 }
 
-if install;
+if $install;
   then
     installation
     # Load environment variables
@@ -200,7 +200,7 @@ if install;
     set +a
     echo your WebDav server should now be running on port $RCLONE_WEBDAV_PORT with root folder: $RCLONE_WEBDAV_ROOT_PATH
   else
-    if uninstall;
+    if $uninstall;
       then
         uninstallation
         echo your WebDav server is now uninstalled!

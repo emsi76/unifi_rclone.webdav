@@ -39,7 +39,7 @@ Successfully tested on (only one device so far due to lack of hardware):
   <tr>
   <td>Family: UniFi Dream Machine (UDM)</td>
   <td>Model: UniFi Dream Machine Pro (UDM-Pro)</td>
-  <td><ul><li>Firmware: 4.0.20 (4.0.20)</li><li>Firmware: 4.0.21 (4.0.21)</li><li>Firmware: 4.1.13</li></ul></td>
+  <td><ul><li>Firmware: 4.0.20</li><li>Firmware: 4.0.21</li><li>Firmware: 4.1.13</li></ul></td>
   </tr>
   </table>
 </p>

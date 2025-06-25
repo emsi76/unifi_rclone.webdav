@@ -216,6 +216,7 @@ if $install;
     set -a
       source $RCLONE_WEBDAV_FOLDER/rclone_webdav.env
     set +a
+    mkdir -p $RCLONE_WEBDAV_ROOT_PATH
     echo your WebDav server should now be running on port $RCLONE_WEBDAV_PORT with root folder: $RCLONE_WEBDAV_ROOT_PATH
   else
     if $uninstall;
